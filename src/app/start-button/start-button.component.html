@@ -1,0 +1,8 @@
+<button class="primary" (click)="start()" *ngIf="!palabra">¿¿Desea empezar el juego??</button>
+<div *ngIf="palabra">
+  <h2>Una pista para empezar:</h2> <br>
+  <p>{{pista}}</p>
+  <input type="text" [(ngModel)]= "name" >
+  <p *ngIf="name===palabra" [ngClass]="'correcto'">!!SI ES VERDAD!!!</p> <br>
+  <button class="secondary" (click)="start()" *ngIf="name===palabra?'cambio':'secondary' " >Cambiar palabra??</button>
+</div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '28dias';
+  name!: string;
+  cities = ['Coahuila','Nuevo Leon','Chihuahua', 'Sonora'];
+  selection!: string;
+  clave= 'perrito'
+
+  onCityClicked(city: string): void{
+    console.log('City', city);
+    this.selection=city;
+  }
+  clicked(name:string):void{
+    this.name=name;
+  }
+
+  getClear(): void{
+    this.selection='';
+  }
 }

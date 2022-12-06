@@ -1,0 +1,44 @@
+button.primary{
+  box-sizing: border-box;
+  width: 20%;
+  padding: 10px;
+  color: whitesmoke;
+  cursor: pointer;
+  background-color: rgb(173, 45, 66);
+  border-radius: 8px;
+  box-shadow: 3px 2px 4px 2px black;
+  margin: 5px;
+  &:hover{
+    transition: 0.4s;
+    width: 22%;
+    padding: 14px;
+    background-color: rgb(201, 19, 28);
+    box-shadow: 5px 3px 6px 3px black;
+  }
+}
+button.secondary{
+  box-sizing: border-box;
+  width: 14%;
+  padding: 6px;
+  color: whitesmoke;
+  cursor: pointer;
+  background-color: rgb(52, 14, 155);
+  border-radius: 6px;
+  box-shadow: 3px 2px 4px 2px black;
+  margin: 5px;
+  &:hover{
+    transition: 0.3s;
+    width: 15%;
+    padding: 7px;
+    background-color: rgb(113, 19, 201);
+    box-shadow: 4px 2px 5px 2px black;
+  }
+  button.cambio{
+      transition: 0.6s;
+      width: 14%;
+      padding: 6px;
+      background-color: rgb(14, 155, 84);
+      box-shadow: 3px 2px 4px 2px black;
+      color: aqua;
+  }
+}
