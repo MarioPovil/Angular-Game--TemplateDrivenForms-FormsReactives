@@ -11,6 +11,12 @@ export class AppComponent {
   cities = ['Coahuila','Nuevo Leon','Chihuahua', 'Sonora'];
   selection!: string;
   clave= 'perrito'
+ deleteCity(city:string):void{
+  this.cities=this.cities.filter(e=>{return e!==city});
+ }
+  addNewCity(city:string):void{
+  this.cities.push(city);
+  }
 
   onCityClicked(city: string): void{
     console.log('City', city);

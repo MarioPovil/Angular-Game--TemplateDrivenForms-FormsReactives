@@ -88,7 +88,7 @@ export const environment =
   {
     "palabra":"FRENO",
     "tags":["FRENO"],
-    "pista":"Lo que detiene"
+    "pista":"Lo que detiene un coche"
   },
   {
     "palabra":"ARENA",
