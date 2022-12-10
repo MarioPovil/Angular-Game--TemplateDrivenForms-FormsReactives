@@ -10,16 +10,22 @@ export class AppComponent {
   name!: string;
   cities = ['Coahuila','Nuevo Leon','Chihuahua', 'Sonora'];
   selection!: string;
-  clave= 'perrito'
+  criterio!:string;
+  clave= 'perrito';
+  polis!:string;
+  showPolis(polis:string):void{
+    console.log(polis);
+  }
  deleteCity(city:string):void{
   this.cities=this.cities.filter(e=>{return e!==city});
+  this.selection='';
  }
+
   addNewCity(city:string):void{
   this.cities.push(city);
   }
 
   onCityClicked(city: string): void{
-    console.log('City', city);
     this.selection=city;
   }
   clicked(name:string):void{
