@@ -73,7 +73,7 @@ export const environment =
   {
     "palabra":"DIODO",
     "tags":["DIODO"],
-    "pista":"Lámpara de dos electrodos"
+    "pista":"componente electronico, solo una dirección"
   },
   {
     "palabra":"ORUGA",
@@ -123,7 +123,7 @@ export const environment =
   {
     "palabra":"NAVAJA",
     "tags":["NAVAJA"],
-    "pista":"Cortaplumas"
+    "pista":"Cortaplumas, arma punzocortante"
   },
   {
     "palabra":"ADEREZO",

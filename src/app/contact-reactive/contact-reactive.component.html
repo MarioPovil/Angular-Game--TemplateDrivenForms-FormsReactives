@@ -1,1 +1,42 @@
-<p>contact-reactive works!</p>
+<h1>Reactive Form</h1>
+<form (ngSubmit)="onSubmit()" [formGroup]="contactForm"><!--contactForm requiere declaracion en app.module como ReactiveFormsModule-->
+
+    <div class="mb-4">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" formControlName="name" required >
+        <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['required'] "
+         class="alert alert-danger">This Field is required.</div>
+        <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['minlength'] "
+         class="alert alert-danger">Name has to be  {{ contactForm.get('name')?.errors?.['minlength']?.requiredLength}} characters at least.</div>
+
+    </div>
+
+    <div class="mb-4 form-check">
+        <label for="checkAdult" class="form-label">¿Are you over 18 years old?</label>
+        <input type="checkbox" class="form-check-input" id="check" name="check" formControlName="check" required>
+        <div *ngIf="contactForm.get('check')?.touched && contactForm.get('check')?.errors?.['required'] "  class="alert alert-danger">you have to be 18 years old at least.</div>
+    </div>
+
+    <div class="mb-4">
+        <label for="Departament" class="form-label">Departament</label>
+        <select name="Departament" id="Departament" class="form-select form-select-sm" name="select" formControlName="select"  required>
+            <option selected>none...</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Sales">Sales</option>
+            <option value="Other">Other</option>
+        </select>
+        <div *ngIf="contactForm.get('select')?.touched && contactForm.get('select')?.errors?.['required'] " class="alert alert-danger">You have to choose one of these departaments</div>
+    </div>
+
+    <div class="mb-4">
+        <label for="comment" class="form-label">Comment</label>
+        <textarea type="text" class="form-control" name="comment" formControlName="comment"
+         required id="comment" rows="4" placeholder="Leave us a comment"> </textarea>
+         <div *ngIf="contactForm.get('comment')?.touched && contactForm.get('comment')?.errors?.['required']" class="alert alert-danger" >¡¡Please leave us a comment!!</div>
+        <div *ngIf="contactForm.get('comment')?.errors?.['maxlength'] " class="alert alert-danger">¡You reach the top of characters allowed! <br> the maximun characters allowed is {{contactForm.get('comment')?.errors?.['maxlength'].requiredLength}} </div>
+        </div>
+
+    <div class="float-end d-grid gap-2 col-4">
+        <button type="submit" class="btn btn-info btn-lg" [disabled]="contactForm.invalid">Send</button>
+    </div>
+</form>

@@ -1,0 +1,26 @@
+  <div class="container p-2 juegos fw-bold text-center" style="background-color: rgb(204, 31, 31);">
+    <h1>¡Añadir ciudades!</h1> <hr>
+    <div class="row" style="box-shadow: 2px 2px 2px  black;">
+       <div class="col-md-12 d-flex justify-content-center my-3 " >
+        <app-form-new-item (NewItemEvent)="addNewCity($event)"  [label]="'City'" [className]="'btn-info'"></app-form-new-item>
+        </div>
+        <div class="col-md-6 my-3">
+        <label>Search: </label>  <input type="text" class="form-control" placeholder="Filter..." [(ngModel)]="criterio">
+        </div>
+        <div class="col-md-8 ">
+        <ul >
+        <app-cities *ngFor="let city of (cities | filterPipe:criterio)" (cityClickedEvent)="onCityClicked($event)" [city]="city" [selection]="selection"></app-cities>
+        </ul>
+        </div>
+        <div class="col-md-4">
+            <div *ngIf="selection">
+              <p >Your City is: {{selection}}</p>
+            <!--  <button (click)="getClear()">Clear</button>-->
+              <app-button (click)="getClear()" [ngStyle]="{color: 'blue'}"  [label]="'¿Clear?'" [selection]="selection" ></app-button>
+              <button (click)="deleteCity(selection)"  class="btn-primary btn">Delete</button>
+
+           </div>
+      </div>
+    </div>
+  </div>
+

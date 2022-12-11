@@ -1,8 +1,18 @@
-<button class="primary" (click)="start()" *ngIf="!palabra">¿¿Desea empezar el juego??</button>
-<div *ngIf="palabra">
-  <h2>Una pista para empezar:</h2> <br>
-  <p>{{pista}}</p>
-  <input type="text" [(ngModel)]= "name" >
-  <p *ngIf="name===palabra" [ngClass]="'correcto'">!!SI ES VERDAD!!!</p> <br>
-  <button class="secondary" (click)="start()" *ngIf="name===palabra?'cambio':'secondary' " >Cambiar palabra??</button>
+<div class="container fondo">
+<h1 id="per">¡¡Bienvenido al juego de adivinar palabras!!</h1>
+<button class="primary"  (click)="start()" *ngIf="!palabra">¿¿Desea empezar el juego??</button>
+  <div class="container" *ngIf="palabra">
+      <h2>Una pista para empezar:</h2> <br>
+      <p class="pista">{{pista}}</p>
+        <div class="d-flex justify-content-around">
+          <input class="col-md-6 my-3" type="text" [(ngModel)]= "name" >
+          <button class="col-md-6 my-3 secondary" (click)="start()" *ngIf="name===palabra?'cambio':'secondary' " >Cambiar palabra??</button>
+        </div>
+        <div *ngIf="name===palabra" class="d-flex justify-content-around">
+
+          <img src="https://cdn0.iconfinder.com/data/icons/birthday-103/64/confetti_party_popper_party_carnival_festival_celebration_celebrate_birthday_congratulations-128.png" alt="cong">
+          <p class=".correcto" [ngClass]="'correcto'">¡¡¡SI ES VERDAD!!!</p> <br>
+          <img src="https://cdn0.iconfinder.com/data/icons/birthday-103/64/confetti_party_popper_party_carnival_festival_celebration_celebrate_birthday_congratulations-128.png" alt="cong">
+      </div>
+  </div>
 </div>

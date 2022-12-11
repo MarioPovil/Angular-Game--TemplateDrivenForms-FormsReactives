@@ -1,0 +1,11 @@
+.as{
+    padding: 0.4rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px black;
+    margin-right: 1rem;
+    &:hover{
+        padding: 0.42rem;
+        box-shadow: 1.1px 1.1px 1.1px 1.2px black;
+    }
+}
+

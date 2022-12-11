@@ -43,10 +43,59 @@ button.secondary{
   }
 }
 .correcto{
-  background-color: green;
+  background-color: rgb(208, 191, 163);
   font-size: 24px;
-  color: white;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(var(--rotate), #3159e9d5 20%, #09186e 43%, #0953bbd2 80%);
+  transition: opacity 2.5s;
+  font-size: 30px;
+  font-weight: 800;
+transition: opacity 2.5s;
+animation: spin 2s linear infinite;
+color: rgb(255, 255, 255);
+  letter-spacing: 4px;
   border-radius: 10px;
-  width: 8rem;
+  width: 70%;
   height: 5rem;
+  box-shadow: 2px 2px 1px 2px rgb(9, 38, 133);
+}
+.fondo{
+  background-image: url('https://i.blogs.es/28f98a/wordle/1366_2000.jpg');
+  height: 85vh;
+  min-height: 60vh;
+  border-radius: 10px;
+}
+#per{
+  background: linear-gradient(var(--rotate), #4be155 20%, #0a822a 43%, #09d04c 80%);
+  transition: opacity 2.5s;
+  font-size: 30px;
+  font-weight: 800;
+  width: 100%;
+ padding: 10px;
+animation: spin 1.5s linear infinite;
+-webkit-background-clip: text;
+color: transparent;
+}
+.pista{
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
+  background-color: #ede4d181;
+  letter-spacing: 3px;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
 }
