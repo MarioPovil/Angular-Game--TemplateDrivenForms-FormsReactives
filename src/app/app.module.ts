@@ -14,6 +14,7 @@ import { ContactReactiveComponent } from './contact-reactive/contact-reactive.co
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HeaderComponent } from './header/header.component';
     ContactComponent,
     ContactReactiveComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
