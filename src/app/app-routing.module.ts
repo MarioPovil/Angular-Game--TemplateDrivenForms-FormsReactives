@@ -4,6 +4,7 @@ import { CitiesComponent } from './cities/cities.component';
 import { ContactReactiveComponent } from './contact-reactive/contact-reactive.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { StartButtonComponent } from './start-button/start-button.component';
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path:'contact-reactive', component:ContactReactiveComponent },
   { path:'contact-template', component:ContactComponent },
   { path:'cities', component:HomeComponent },
-  { path:'GuessTheWord', component:StartButtonComponent }
+  { path:'GuessTheWord', component:StartButtonComponent },
+  {path:'**', component:PagenotfoundComponent}
 ]
 
 @NgModule({
