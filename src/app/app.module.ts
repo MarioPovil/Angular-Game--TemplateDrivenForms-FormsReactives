@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { SeleccionComponent } from './seleccion/seleccion.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     ContactReactiveComponent,
     HomeComponent,
     HeaderComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    SeleccionComponent
   ],
   imports: [
     BrowserModule,

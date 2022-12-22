@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 @Component({
   selector: 'app-cities',
   template: `
-    <li (click)="onCityClicked(city)" [ngClass]="{'alert alert-primary': city===selection}">
+    <li style="list-style: none;" (click)="onCityClicked(city)" [ngClass]="{'alert alert-primary': city===selection}">
     {{city}} </li>`,
   styleUrls: ['./cities.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

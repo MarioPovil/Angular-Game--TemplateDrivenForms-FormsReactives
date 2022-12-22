@@ -5,14 +5,15 @@ import { ContactReactiveComponent } from './contact-reactive/contact-reactive.co
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { SeleccionComponent } from './seleccion/seleccion.component';
 import { StartButtonComponent } from './start-button/start-button.component';
 
 const routes: Routes = [
-  { path:'', redirectTo:'/GuessTheWord', pathMatch:'full' },
   { path:'contact-reactive', component:ContactReactiveComponent },
   { path:'contact-template', component:ContactComponent },
   { path:'cities', component:HomeComponent },
   { path:'GuessTheWord', component:StartButtonComponent },
+  { path:'', component:SeleccionComponent },
   {path:'**', component:PagenotfoundComponent}
 ]
 
