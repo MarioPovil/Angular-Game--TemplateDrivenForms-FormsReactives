@@ -9,11 +9,11 @@ import { SeleccionComponent } from './seleccion/seleccion.component';
 import { StartButtonComponent } from './start-button/start-button.component';
 
 const routes: Routes = [
+  { path:'', component:SeleccionComponent },
   { path:'contact-reactive', component:ContactReactiveComponent },
   { path:'contact-template', component:ContactComponent },
   { path:'cities', component:HomeComponent },
   { path:'GuessTheWord', component:StartButtonComponent },
-  { path:'', component:SeleccionComponent },
   {path:'**', component:PagenotfoundComponent}
 ]
 
