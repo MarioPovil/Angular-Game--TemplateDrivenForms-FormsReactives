@@ -1,14 +1,14 @@
-  <div class="container p-2 juegos fw-bold text-center" style="background-color: rgb(204, 31, 31);">
+  <div class="container p-2 juegos fw-bold text-center" style="box-shadow: 0px 0px 14px black; border-radius: 12px;">
     <h1>¡Añadir ciudades!</h1> <hr>
-    <div class="row" style="box-shadow: 2px 2px 2px  black;">
-       <div class="col-md-12 d-flex justify-content-center my-3 " >
-        <app-form-new-item (NewItemEvent)="addNewCity($event)"  [label]="'City'" [className]="'btn-info'"></app-form-new-item>
-        </div>
-        <div class="col-md-6 my-3">
-        <label>Search: </label>  <input type="text" class="form-control" placeholder="Filter..." [(ngModel)]="criterio">
-        </div>
-        <div class="col-md-8 ">
-        <ul >
+    <div class="row">
+       <div class="d-flex justify-content-center flex-row mb-3 my-3" >
+        <!--Add-->
+        <app-form-new-item  class="p-2 bot" (NewItemEvent)="addNewCity($event)"  [label]="'City'" [className]="'btn-info'"></app-form-new-item>
+        <!--Search-->
+        <label class="serc">Search </label>  <input type="text" class="form-control p-2 ser" placeholder="Filter..." [(ngModel)]="criterio">
+      </div>
+        <div class="col-md-8 d-flex">
+        <ul class="listado">
         <app-cities *ngFor="let city of (cities | filterPipe:criterio)" (cityClickedEvent)="onCityClicked($event)" [city]="city" [selection]="selection"></app-cities>
         </ul>
         </div>

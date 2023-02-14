@@ -1,0 +1,57 @@
+.apart{
+    width: 40%;
+    height: 200px;
+    margin: 25px;
+    box-shadow: 2px 2px  black;
+    background-size: cover;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+@media(max-width:700px){
+  .apart{
+    background-size: 100% 100%;
+}
+}
+
+.aparh1{
+  background-image: url("../../assets/img/1.png");
+}
+.aparh2{
+  background-image: url("../../assets/img/2.png");
+}
+.aparh3{
+  background-image: url("../../assets/img/3.png");
+}
+.aparh4{
+  background-image: url("../../assets/img/4.png");
+}
+.aparh1:hover{
+  cursor: pointer;
+  opacity: 1;
+  box-shadow: 3px 3px  black;
+  color: rgba(240, 248, 255, 0);
+}
+.aparh2:hover{
+  cursor: pointer;
+  opacity: 1;
+  box-shadow: 3px 3px  black;
+  color: rgba(240, 248, 255, 0);
+
+}
+.aparh3:hover{
+  cursor: pointer;
+  opacity: 1;
+  box-shadow: 3px 3px  black;
+  color: rgba(240, 248, 255, 0);
+}
+.aparh4:hover{
+  cursor: pointer;
+  opacity: 1;
+  box-shadow: 3px 3px  black;
+  color: rgba(240, 248, 255, 0);
+}

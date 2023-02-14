@@ -10,10 +10,8 @@ button.primary{
   margin: 5px;
   &:hover{
     transition: 0.4s;
-    width: 11rem;
-    height: 5rem;
-    background-color: rgb(201, 19, 28);
-    box-shadow: 5px 3px 6px 3px black;
+    filter: brightness(150%);
+    box-shadow: 4px 3px 4px 3px black;
   }
 }
 button.secondary{
@@ -28,8 +26,7 @@ button.secondary{
   margin: 5px;
   &:hover{
     transition: 0.3s;
-    width: 15%;
-    padding: 7px;
+    filter: brightness(150%);
     background-color: rgb(113, 19, 201);
     box-shadow: 4px 2px 5px 2px black;
   }

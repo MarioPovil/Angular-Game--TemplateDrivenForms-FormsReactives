@@ -4,7 +4,8 @@
     box-shadow: 1px 1px 1px 1px black;
     margin-right: 1rem;
     &:hover{
-        padding: 0.42rem;
+      background-color: forestgreen;
+        filter: brightness(110%);
         box-shadow: 1.1px 1.1px 1.1px 1.2px black;
     }
 }

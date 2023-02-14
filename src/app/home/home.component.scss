@@ -1,0 +1,47 @@
+ul{
+  list-style: none;
+}
+.ser{
+  width: 250px;
+  margin-left: 10px;
+}
+.bot{
+  margin-right: 200px;
+}
+.serc{
+  margin: auto 0 ;
+}
+hr{
+  border: 5px solid rgb(5, 92, 5);
+  border-radius: 5px;
+}
+.listado{
+    margin-left: 62%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+@media(max-width:700px){
+  .ser{
+    width: 150px;
+    height: 50px;
+    margin-top: 40px;
+    margin-left: 10px;
+  }
+  .bot{
+    margin-right: 0px;
+  }
+  .serc{
+    margin: auto 0 ;
+  }
+  hr{
+    border: 5px solid rgb(5, 92, 5);
+    border-radius: 5px;
+  }
+  .listado{
+    margin: auto;
+      margin-top: 20px;
+      cursor: pointer;
+  }
+}
